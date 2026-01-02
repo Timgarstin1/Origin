@@ -3,5 +3,14 @@ sources:
     database: raw
     schema: jaffle_shop
     tables:
-      - name: customers
-      - name: orders
+      - name: customers_with_loaded_at
+      - name: orders_with_loaded_at
+        config:
+          freshness:
+            warn_after:
+              count: 24
+              period: hour
+            error_after: 
+              count: 48
+              period: hour
+          loaded_at_field: loaded_at

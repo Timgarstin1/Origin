@@ -5,4 +5,4 @@
         order_date,
         status
 
-    from {{ source('jaffle_shop', 'orders') }}  --raw.jaffle_shop.orders
+    from {{ source('jaffle_shop', 'orders_with_loaded_at') }}  --raw.jaffle_shop.orders
